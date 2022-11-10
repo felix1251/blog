@@ -1,14 +1,15 @@
 ## Project setup
 ```
-npm install
+bundle install
 ```
 
-### Compiles and hot-reloads for development
+### setup db
 ```
-npm run serve
+rails db:create
+rails db:migrate
 ```
 
-### Compiles and minifies for production
+### run server
 ```
-npm run build
+rails s
 ```
