@@ -94,10 +94,6 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    dotenv (2.8.1)
-    dotenv-rails (2.8.1)
-      dotenv (= 2.8.1)
-      railties (>= 3.2)
     erubi (1.11.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -191,7 +187,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.5.3-x86_64-linux)
     stimulus-rails (1.1.1)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.20-x86_64-linux)
@@ -231,16 +226,14 @@ DEPENDENCIES
   capybara
   debug
   devise
-  dotenv-rails
   importmap-rails
   jbuilder
-  mysql2
+  mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.4)
   redis (~> 4.0)
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
   stimulus-rails
   tailwindcss-rails
   turbo-rails
@@ -249,7 +242,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.25
+   2.3.7
