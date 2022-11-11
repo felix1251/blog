@@ -1,8 +1,8 @@
 # README
 
-ruby version 2.6.3
+ruby version 3.1.2
 
-Ruby on Rails version 5.2.8
+Ruby on Rails version 7.0.4
 
 Open for contributors
 
