@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ruby version 2.6.3
 
-Things you may want to cover:
+Ruby on Rails version 5.2.8
 
-* Ruby version
+Open for contributors
 
-* System dependencies
+CONTACT ME
 
-* Configuration
+email: domhack123@gmail.com
 
-* Database creation
 
-* Database initialization
+## Installation
 
-* How to run the test suite
+```terminal
+bundle install
+rails db:create
+rails db:migrate
+rails s
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
