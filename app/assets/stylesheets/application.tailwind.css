@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    @apply text-gray-800;
+}
+
 .container {
     @apply mx-auto max-w-7xl;
 }
