@@ -17,6 +17,12 @@ export default class extends Controller {
       const intersectOnSecondSection = a.top <= b.top + b.height && a.top + a.height > b.top
       const intersectOnThirdSection = a.top <= c.top + c.height && a.top + a.height > c.top
 
+      if(window.scrollY==0){
+        this.init = false
+        this.navBackground.classList.remove("bg-secondary");
+        this.element.classList.replace("text-gray-800", "text-secondary")
+      }
+
       if (intersectOnSecondSection && !intersectOnThirdSection) {
         this.navBackground.classList.remove("bg-secondary");
         this.navBackground.classList.add("bg-gray-800");
@@ -24,17 +30,12 @@ export default class extends Controller {
         return
       }
 
-      if(window.scrollY==0){
-        this.init = false
-        this.navBackground.classList.remove("bg-secondary");
-        this.element.classList.replace("text-gray-800", "text-secondary")
-      }
-
       if(window.scrollY > 0) {
         this.init = true
         this.navBackground.classList.add("bg-secondary");
         this.element.classList.replace("text-secondary", "text-gray-800")
       }
+      
     });
   }
 }
