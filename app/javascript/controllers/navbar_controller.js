@@ -3,7 +3,6 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   connect() {
-    this.init = false
     this.navBackground = document.getElementById("nav-background")
     this.secondSection = document.getElementById("second-section")
     this.thirdSection = document.getElementById("third-section")
@@ -18,7 +17,6 @@ export default class extends Controller {
       const intersectOnThirdSection = a.top <= c.top + c.height && a.top + a.height > c.top
 
       if(window.scrollY==0){
-        this.init = false
         this.navBackground.classList.remove("bg-secondary");
         this.element.classList.replace("text-gray-800", "text-secondary")
       }
@@ -31,11 +29,9 @@ export default class extends Controller {
       }
 
       if(window.scrollY > 0) {
-        this.init = true
         this.navBackground.classList.add("bg-secondary");
         this.element.classList.replace("text-secondary", "text-gray-800")
       }
-      
     });
   }
 }
