@@ -23,19 +23,14 @@ export default class extends Controller {
       const intersectOnSecondSection = navComponent.top <= secondSection.top + secondSection.height && navComponent.top + navComponent.height > secondSection.top
       const intersectOnThirdSection = navComponent.top <= thirdSection.top + thirdSection.height && navComponent.top + navComponent.height > thirdSection.top
 
-      if(winSrollY == 0){
+      if(winSrollY == 0 || (intersectOnSecondSection && !intersectOnThirdSection)){
         this.navBackground.classList.remove("bg-secondary");
+        this.navBackground.classList.add("bg-gray-800");
         this.element.classList.replace("text-gray-800", "text-secondary")
         return
       }
 
-      if (intersectOnSecondSection && !intersectOnThirdSection) {
-        this.navBackground.classList.remove("bg-secondary");
-        this.navBackground.classList.add("bg-gray-800");
-        this.element.classList.replace("text-gray-800", "text-secondary",)
-        return
-      }
-
+      this.navBackground.classList.remove("bg-gray-800");
       this.navBackground.classList.add("bg-secondary");
       this.element.classList.replace("text-secondary", "text-gray-800")
     });
