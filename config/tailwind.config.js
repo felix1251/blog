@@ -1,6 +1,7 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+// const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  darkMode: 'class',
   content: [
     './public/*.html',
     './app/helpers/**/*.rb',
@@ -9,10 +10,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      colors: {
+        main: "#01345B",
+        primary: "#5CE0D8",
+        secondary: "#FFCF43",
       },
-    },
+    }
   },
   plugins: [
     require('@tailwindcss/forms'),
