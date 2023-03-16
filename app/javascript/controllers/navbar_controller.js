@@ -8,15 +8,22 @@ export default class extends Controller {
     this.thirdSection = document.getElementById("third-section")
 
     window.addEventListener("scroll", () => {
-      const value = ((this.element.clientHeight/100)*window.scrollY)/100
-      this.navBackground.style.opacity = value.toFixed(1) 
-      const a = this.element.getBoundingClientRect();
-      const b = this.secondSection.getBoundingClientRect();
-      const c = this.thirdSection.getBoundingClientRect();
-      const intersectOnSecondSection = a.top <= b.top + b.height && a.top + a.height > b.top
-      const intersectOnThirdSection = a.top <= c.top + c.height && a.top + a.height > c.top
+      const navheight = this.element.clientHeight
+      const winSrollY = window.scrollY
+      
+      const heightDivideBy100 = navheight/100
+      const multiplyByWinScollY = heightDivideBy100*winSrollY
+      const opacityValue = (multiplyByWinScollY/100).toFixed(1) 
 
-      if(window.scrollY == 0){
+      this.navBackground.style.opacity = opacityValue
+
+      const navComponent = this.element.getBoundingClientRect();
+      const secondSection = this.secondSection.getBoundingClientRect();
+      const thirdSection = this.thirdSection.getBoundingClientRect();
+      const intersectOnSecondSection = navComponent.top <= secondSection.top + secondSection.height && navComponent.top + navComponent.height > secondSection.top
+      const intersectOnThirdSection = navComponent.top <= thirdSection.top + thirdSection.height && navComponent.top + navComponent.height > thirdSection.top
+
+      if(winSrollY == 0){
         this.navBackground.classList.remove("bg-secondary");
         this.element.classList.replace("text-gray-800", "text-secondary")
         return
