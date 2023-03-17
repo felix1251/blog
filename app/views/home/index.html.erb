@@ -1,5 +1,5 @@
-<div>
-  <section class="h-screen">
+<div data-controller="home">
+  <section id="first-section" class="h-screen" data-home-target="firstSection">
     <div id="first-section" class="flex flex-col-reverse md:flex-row gap-5 md:gap-14 container px-5 md:pt-16 items-center justify-center h-full text-secondary font-bold">
       <div class="grid">
         <span class="text-4xl md:text-5xl">Hi I'm</span>
@@ -17,15 +17,22 @@
       </div>
     </div>
   </section>
-  <section id="second-section" class="h-screen bg-secondary">
-    
+  <section id="second-section" class="h-screen bg-secondary" data-home-target="secondSection">
+    <div class="container px-2 py-5">
+      <h1 class="text-gray-800 font-medium text-4xl uppercase">Projects</h1>
+      
+    </div>
   </section>
-
-  <section id="third-section" class="h-screen">
-    
+  <section id="third-section" class="h-screen" data-home-target="thirdSection">
+     <div class="container px-2 py-5">
+      <h1 class="text-secondary font-medium text-4xl uppercase">Languages and Tools</h1>
+      
+    </div>
   </section>
-
-  <section id="forth-section" class="h-screen bg-secondary">
-    
+  <section id="forth-section" class="h-screen bg-secondary" data-home-target="forthSection">
+     <div class="container px-2 py-5">
+      <h1 class="text-gray-800 font-medium text-4xl uppercase">Contact Me</h1>
+      
+    </div>
   </section>
 </div>
