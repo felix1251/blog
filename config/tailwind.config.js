@@ -9,6 +9,9 @@ module.exports = {
     './app/views/**/*.{erb,haml,html,slim}'
   ],
   theme: {
+    fontFamily: {
+      space: ['Space Grotesk', 'sans-serif'],
+    },
     extend: {
       colors: {
         main: "#01345B",
