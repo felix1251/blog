@@ -9,5 +9,5 @@
 }
 
 .container {
-    @apply mx-auto max-w-7xl px-2;
+    @apply mx-auto max-w-[82rem] px-2;
 }
