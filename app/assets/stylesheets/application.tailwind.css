@@ -11,3 +11,11 @@
 .container {
     @apply mx-auto max-w-[87rem] px-8;
 }
+
+body {
+    @apply dark:bg-gray-800
+}
+
+.primary-text-color {
+    @apply text-primary dark:text-white; 
+}
