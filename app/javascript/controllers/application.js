@@ -9,9 +9,7 @@ window.Stimulus   = application
 let iconLight = document.getElementById("theme-toggle-light-icon");
 let iconDark = document.getElementById("theme-toggle-dark-icon");
 
-if (localStorage.getItem('color-theme') === 'dark' 
-    || (!('color-theme' in localStorage) 
-    && window.matchMedia('(prefers-color-scheme: dark)').matches))
+if (localStorage.getItem('color-theme') === 'dark')
 {
     application.element.classList.add('dark');
     iconDark.classList.add("hidden")
