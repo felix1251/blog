@@ -5,7 +5,7 @@ export default class extends Controller {
     static targets = [ "lightIcon", "darkIcon" ];
 
     connect() { 
-        this.element.addEventListener("click", () => this.clicked(this.application));
+        this.element.addEventListener("click", () => this.clicked());
     };
 
     clicked(){
