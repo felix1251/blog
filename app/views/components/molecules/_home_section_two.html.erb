@@ -1,16 +1,7 @@
 <section class="container py-16" data-home-target="homeSectionTwo">
-    <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row justify-between items-start mb-12">
-        <div class="basis-2/4">
-        <span class="text-xs uppercase text-gray-400 font-semibold mb-2 block">
-            Some projects I worked on.               
-        </span>
-        <h2 class="text-4xl font-medium text-primary">
-            Building projects that change people's lives.            
-        </h2>
-        </div>
-        <div class="lg:basis-2/4 flex justify-end items-center space-x-1 cursor-pointer">
-            <a class="text-xs uppercase text-gray-400 font-semibold">Browse more</a>
-            <%= render "components/atoms/arow_icon" %>
-        </div>
-    </div>
+    <%= render "components/atoms/section_header", 
+        title: "Some projects I worked on" ,
+        highlight: "Building projects that change people's lives.",
+        redirect_title: "Browse more"
+    %>
 </section>
