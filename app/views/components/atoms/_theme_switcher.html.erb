@@ -2,9 +2,11 @@
     id="theme-toggle"
     type="button"
     class="hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5"
+    data-controller="themetoggle"
 >
     <svg
         id="theme-toggle-dark-icon"
+        data-themetoggle-target="lightIcon"
         class="w-5 h-5"
         fill="currentColor"
         viewBox="0 0 20 20"
@@ -14,6 +16,7 @@
     </svg>
     <svg
         id="theme-toggle-light-icon"
+        data-themetoggle-target="darkIcon"
         class="w-5 h-5 hidden"
         fill="currentColor"
         viewBox="0 0 20 20"
