@@ -13,7 +13,7 @@
 }
 
 body {
-    @apply dark:bg-gray-800
+    @apply dark:bg-dark flex flex-col h-screen;
 }
 
 .primary-text-color {
