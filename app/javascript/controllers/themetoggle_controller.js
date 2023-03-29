@@ -4,8 +4,14 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
     static targets = [ "lightIcon", "darkIcon" ];
 
-    connect() { 
+    connect() {
+        console.log("Connected theme switcher JS")
         this.element.addEventListener("click", () => this.clicked());
+    };
+
+    disconnect() {
+        console.log("Disconnected theme switcher JS")
+        this.element.removeEventListener("click", () => this.clicked());
     };
 
     clicked(){
