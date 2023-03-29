@@ -4,5 +4,9 @@
         highlight: "Building awesome projects for awesome people",
         redirect_title: "Browse more"
     %>
-    <%= render "components/atoms/card"%>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <% @data_hash["projects"].each do |project| %>
+             <%= render "components/atoms/card"%>
+        <% end %>
+    </div>
 </section>
