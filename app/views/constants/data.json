@@ -1,9 +1,9 @@
 {
     "projects": [
-        {"name": "felix"},
-        {"name": "felix"}
+        {"title": "Lixtagram", "img": "/assets/sample.jpeg"},
+        {"title": "Kandori", "img": "/assets/sample.jpeg"}
     ],
     "services": [
-        
+
     ]
 }
