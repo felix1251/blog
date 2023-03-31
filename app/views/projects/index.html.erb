@@ -1,0 +1,7 @@
+<%= turbo_frame_tag "projects" do %>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <% @projects.each do |project| %>
+        <%= render "components/atoms/project_card", project: project %>
+      <% end %>
+  </div>
+<% end %>

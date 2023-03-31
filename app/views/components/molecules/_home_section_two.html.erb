@@ -5,9 +5,11 @@
         has_more: true,
         redirect_title: "Browse more"
     %>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <% @data_hash["projects"].each do |project| %>
-             <%= render "components/atoms/project_card", project: project %>
-        <% end %>
-    </div>
+    <%= turbo_frame_tag "projects", src: "/projects" do %>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+             <% (1..4).each do %>
+                <%= render "components/atoms/project_card", project: nil %>
+            <% end %>
+        </div>
+    <% end %>
 </section>
