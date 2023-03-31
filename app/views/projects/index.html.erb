@@ -1,10 +1,16 @@
 <main class="flex-1 container mt-6 mb-4">
   <%= turbo_frame_tag "projects" do %>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <% @projects.each do |project| %>
-          <%= render "components/atoms/project_card", project: project %>
-        <% end %>
-    </div>
+    <%if @projects.present? %>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <% @projects.each do |project| %>
+            <%= render "components/atoms/project_card", project: project %>
+          <% end %>
+      </div>
+    <% else %>
+      <div class="h-60 grid place-items-center">
+        <h2 class="text-4xl primary-text-color font-medium">No data found</h2>
+      </div>
+    <% end %>
   <% end %>
 </main>
 
