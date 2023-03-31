@@ -6,7 +6,7 @@
         <h2 class="text-4xl font-medium primary-text-color"><%= highlight %></h2>
     </div>
     <% if has_more %> 
-        <a class="text-gray-400 hover:text-main lg:basis-2/4 flex justify-end items-center space-x-1 cursor-pointer">
+        <a href="<%= url %>" class="text-gray-400 hover:text-main lg:basis-2/4 flex justify-end items-center space-x-1 cursor-pointer">
             <span class="text-xs uppercase font-semibold"><%= redirect_title %></span>
             <%= render "components/atoms/arow_icon" %>
         </a>
