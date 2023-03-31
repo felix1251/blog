@@ -19,3 +19,7 @@ body {
 .primary-text-color {
     @apply text-primary dark:text-white; 
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    @apply cursor-pointer filter dark:invert;
+}

@@ -19,10 +19,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_31_033402) do
   end
 
   create_table "projects", charset: "utf8mb4", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.date "project_start"
-    t.date "project_end"
+    t.string "title", null: false
+    t.text "content", null: false
+    t.date "project_start", null: false
+    t.date "project_end", null: false
     t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
