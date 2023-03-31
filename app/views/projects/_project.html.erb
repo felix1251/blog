@@ -11,12 +11,12 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Project start:</strong>
-    <%= project.project_start %>
+    <%= project.project_start.strftime("%B %Y") %>
   </p>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Project end:</strong>
-    <%= project.project_end %>
+    <%= project.project_end.strftime("%B %Y") %>
   </p>
 
   <% if action_name != "show" %>
