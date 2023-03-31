@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap");
 
 :root {
@@ -22,4 +23,8 @@ body {
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     @apply cursor-pointer filter dark:invert;
+}
+
+.trix-content {
+    @apply primary-text-color;
 }
