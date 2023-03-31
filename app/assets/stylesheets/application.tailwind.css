@@ -28,3 +28,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .trix-content {
     @apply primary-text-color;
 }
+
+.project-card{
+    @apply relative z-30;
+}
+
+.project-card::before{
+    @apply bg-main absolute z-20 top-[1.7rem] right-[-0.5rem] content-[''] h-[35px] w-[35px] rotate-45 z-50;
+}
+
+.project-card::after{
+    @apply bg-main absolute z-40 content-[attr(data-label)] top-[11px] right-[-15px] top-[11px] p-[0.35rem] w-[10rem] text-white text-center;
+}
