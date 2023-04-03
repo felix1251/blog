@@ -1,9 +1,6 @@
 <main class="flex-1 container my-4 grid grid place-items-center">
   <div class="bg-white dark:bg-dark border border-gray-300 dark:border-2 dark:border-gray-700  w-fit p-6 rounded-xl shadow-md">
-    <h2 class="text-xl text-center uppercase font-medium text-main mb-3">Log in / Sign-In</h2>
-    <% if notice %>
-      <p class="text-red-500"><%= notice %></p>
-    <% end %>
+    <h2 class="text-xl text-center uppercase font-medium text-main mb-3">Admin</h2>
     <% if alert %>
       <p class="text-red-500"><%= alert %></p>
     <% end %>
@@ -20,7 +17,7 @@
 
       <% if devise_mapping.rememberable? %>
         <div class="field mt-3 flex items-center gap-2">
-          <%= f.check_box :remember_me, class: "bg-transparent focus:ring-0 focus:ring-offset-0 border checked:bg-main checked:focus:bg-main hover:checked:bg-main" %>
+          <%= f.check_box :remember_me, class: "appearance-none bg-transparent focus:ring-0 focus:ring-offset-0 border checked:bg-main checked:focus:bg-main hover:checked:bg-main" %>
           <%= f.label :remember_me, class: "primary-text-color" %>
         </div>
       <% end %>

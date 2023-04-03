@@ -12,6 +12,9 @@
         Blog
       </a>
       <%= render "components/atoms/theme_switcher" %>
+      <% if user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
+      <% end %>
     </div>
   </div>
 </nav>
