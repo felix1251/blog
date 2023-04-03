@@ -1,23 +1,27 @@
-<a href="/projects/<%= project.present? && project.id %>" data-turbo="false" class="border dark:border-2 border-gray-300 rounded-lg dark:bg-dark dark:border-gray-700 <%= project.present? && "cursor-pointer transform transition duration-100 hover:scale-110 hover:shadow-sm" %>">
-    <% if project.present? && project.img %> 
-        <img class="rounded-t-lg w-full h-[190px] md:h-[180px] object-cover" src="<%= project.img %>" alt="" />
-    <% else %>
-        <div class="animate-pulse rounded-t-lg w-full h-[190px] md:h-[180px] bg-gray-200 dark:bg-gray-700"></div>
-    <% end %>
-    <div class="p-5 max-h-[300px]">
-        <% if project.present? && project.title %> 
-            <h5 class="mb-1 text-xl font-medium tracking-tight primary-text-color"><%= project.title %></h5>
+<a href="/projects/<%= project.present? && project.id %>" data-turbo="false" 
+    data-label="<%= project.present? && "#{project.project_start.strftime("%b %Y")} - #{project.project_end.strftime("%b %Y")}" %>"
+    class="<%= project.present? && "project-card transform transition duration-100 hover:scale-110 hover:shadow-sm"%>">
+    <div class="relative w-full h-full bg-white dark:bg-dark border dark:border-2 border-gray-300 rounded-lg dark:border-gray-700 bg-white dark:bg-dark">
+        <% if project.present? && project.img %> 
+            <img class="rounded-t-lg w-full h-[190px] md:h-[180px] object-cover" src="<%= project.img %>" alt="" />
         <% else %>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-5 w-full mb-5"></div>
+            <div class="rounded-t-lg w-full animate-pulse h-[190px] md:h-[180px] bg-gray-200 dark:bg-gray-700"></div>
         <% end %>
-        <% if project.present? && project.content %> 
-            <p class="leading-[21px] line-clamp-6 text-ellipsis font-normal text-gray-500 dark:text-gray-400"><%= project.content %></p>
-        <% else %>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-10/12 mb-3"></div>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-12/12 mb-3"></div>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-11/12 mb-3"></div>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-10/12 mb-3"></div>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-12/12"></div>
-        <% end %>
+        <div class="p-5 max-h-[300px]">
+            <% if project.present? && project.title %> 
+                <h5 class="mb-1 text-xl font-medium tracking-tight primary-text-color"><%= project.title %></h5>
+            <% else %>
+                <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-5 w-full mb-5"></div>
+            <% end %>
+            <% if project.present? && project.content %> 
+                <p class="leading-[21px] line-clamp-6 text-ellipsis font-normal text-gray-500 dark:text-gray-400"><%= project.content %></p>
+            <% else %>
+                <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-10/12 mb-3"></div>
+                <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-12/12 mb-3"></div>
+                <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-11/12 mb-3"></div>
+                <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-10/12 mb-3"></div>
+                <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-12/12"></div>
+            <% end %>
+        </div>
     </div>
 </a>
