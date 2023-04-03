@@ -60,7 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_31_085834) do
     t.string "title", null: false
     t.text "content", null: false
     t.date "project_start", null: false
-    t.date "project_end", null: false
+    t.date "project_end"
     t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
