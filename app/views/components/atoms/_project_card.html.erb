@@ -1,5 +1,5 @@
 <a href="<%= project.present? ? "/projects/#{project.id}" : "javascript:void(0)" %>" data-turbo="false"
-    data-label="<%= project.present? && "#{project.project_start.strftime("%b %Y")} - #{project.project_end.strftime("%b %Y")}" %>"
+    data-label="<%= project.present? && "#{project.project_start.strftime("%b %Y")} - #{project.project_end.strftime("%b %Y") rescue "present"}" %>"
     class="<%= project.present? && "project-card transform transition duration-100 hover:scale-110"%>">
     <div class="relative w-full h-full bg-white dark:bg-dark border dark:border-2 border-gray-300 rounded-lg dark:border-gray-700 bg-white dark:bg-dark hover:shadow-md">
         <% if project.present? && project.img %> 

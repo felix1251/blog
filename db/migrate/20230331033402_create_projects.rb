@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration[7.0]
       t.string :title, null: false
       t.text :content, null: false
       t.date :project_start, null: false
-      t.date :project_end, null: false
+      t.date :project_end
       t.string :img
 
       t.timestamps
