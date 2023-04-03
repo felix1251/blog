@@ -5,6 +5,9 @@
       <a id="nav-list" href="/" data-turbo-action="replace" class="hidden md:block cursor-pointer <%= current_page?(:controller => 'home') && "text-main"%>">
         Portfolio
       </a>
+      <a id="nav-list" href="/projects" data-turbo-action="replace" class="hidden md:block cursor-pointer <%= current_page?(:controller => 'projects') && "text-main"%>">
+        Projects
+      </a>
       <a id="nav-list" href="/blogs" data-turbo-action="replace" class="hidden md:block cursor-pointer <%= current_page?(:controller => 'blogs') && "text-main"%>">
         Blog
       </a>
