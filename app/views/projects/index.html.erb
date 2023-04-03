@@ -1,7 +1,7 @@
 <main class="flex-1 container mt-6 mb-4">
   <%= turbo_frame_tag "projects" do %>
     <%if @projects.present? %>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <% @projects.each do |project| %>
             <%= render "components/atoms/project_card", project: project %>
           <% end %>
