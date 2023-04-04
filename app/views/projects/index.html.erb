@@ -1,9 +1,6 @@
 <main class="flex-1 container mt-6 mb-4">
   <% if user_signed_in? %>
-    <a href="<%= new_project_path(@project) %>" class="flex gap-2 w-fit items-center mb-6 rounded-lg py-2 text-sm text-white hover:scale-105 hover:shadow-md px-5 bg-main inline-block font-medium">
-      Create new project
-      <%= render "components/atoms/plus_icon", classProps: "w-4 h-4" %>
-    </a>
+    <%= render "components/atoms/button", type: "create", text: "Create new project", link: new_project_path(@project) %>
   <% end %>
   <%= turbo_frame_tag "projects" do %>
     <%if @projects.present? %>
