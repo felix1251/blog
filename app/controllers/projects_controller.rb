@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects or /projects.json
   def index
-    @projects = Project.order(id: :asc)
+    @pagy, @projects = pagy(Project.order(id: :asc), items: 4)
   end
 
   # GET /projects/1 or /projects/1.json
