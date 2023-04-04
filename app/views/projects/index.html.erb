@@ -2,18 +2,10 @@
   <% if user_signed_in? %>
     <%= render "components/atoms/button", type: "create", text: "Create new project", link: new_project_path(@project) %>
   <% end %>
-  <%= turbo_frame_tag "projects" do %>
-    <%if @projects.present? %>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          <% @projects.each do |project| %>
-            <%= render "components/atoms/project_card", project: project %>
-          <% end %>
-      </div>
-    <% else %>
-      <div class="h-60 grid place-items-center">
-        <h2 class="text-4xl primary-text-color font-medium">No data found</h2>
-      </div>
-    <% end %>
+  <%= turbo_frame_tag "projects", class: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10" do %>
+      <% @projects.each do |project| %>
+        <%= render "components/atoms/project_card", project: project %>
+      <% end %>
   <% end %>
 </main>
 

@@ -6,11 +6,9 @@
         url: "/projects",
         redirect_title: "Browse more"
     %>
-    <%= turbo_frame_tag "projects", loading: "lazy", src: "/projects" do %>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-             <% (1..4).each do %>
-                <%= render "components/atoms/project_card", project: nil %>
-            <% end %>
-        </div>
+    <%= turbo_frame_tag "projects", class: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10", loading: "lazy", src: "/projects" do %>
+        <% (1..4).each do %>
+            <%= render "components/atoms/project_card", project: nil %>
+        <% end %>
     <% end %>
 </section>
