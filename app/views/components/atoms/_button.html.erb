@@ -1,0 +1,19 @@
+<% case type %>
+<% when "link" %>
+    <a href="<%= link %>" class="w-fit mb-6 py-2 text-sm text-white hover:scale-105 hover:shadow-md px-5 bg-main font-medium">
+        <%= text %>
+    </a>
+<% when "bordered" %>
+    <button class="mb-6 py-2 text-sm text-main hover:scale-105 hover:shadow-md px-5 border-2 border-main font-medium">
+        <%= text %>
+    </button>
+<% when "create" %>
+    <a href="<%= link %>" class="flex items-center w-fit gap-2 mb-6 py-2 text-sm text-white hover:scale-105 hover:shadow-md px-5 bg-main font-medium">
+        <%= text %>
+        <%= render "components/atoms/plus_icon", classProps: "w-4 h-4" %>
+    </a>
+<% else %>
+     <button class="w-fit mb-6 py-2 text-sm text-white hover:scale-105 hover:shadow-md px-5 bg-main font-medium">
+        <%= text %>
+    </button>
+<% end %>
