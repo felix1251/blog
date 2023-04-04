@@ -3,7 +3,7 @@
     class="<%= project.present? && "project-card transform transition duration-100 hover:scale-110"%>">
     <div class="relative w-full h-full bg-white dark:bg-dark border dark:border-2 border-gray-300 rounded-lg dark:border-gray-700 hover:shadow-md">
         <% if project.present? && project.img.attached? %> 
-            <img class="rounded-t-lg w-full h-[190px] md:h-[180px] object-cover" src="<%= url_for(project.img) %>" alt="" />
+            <img class="rounded-t-lg w-full h-[190px] md:h-[180px] object-cover" src="<%= url_for(project.img) %>" alt="" loading="lazy"/>
         <% else %>
             <div class="rounded-t-lg w-full animate-pulse h-[190px] md:h-[180px] bg-gray-200 dark:bg-gray-700"></div>
         <% end %>

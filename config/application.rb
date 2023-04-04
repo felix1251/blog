@@ -11,6 +11,7 @@ module Shop
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
     config.exceptions_app = self.routes # Add this line
+    config.active_storage.routes_prefix = '/storage'
     # config.assets.paths << Rails.root.join("app", "assets", "images")
 
     # Configuration for the application, engines, and railties goes here.
