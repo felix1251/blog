@@ -3,7 +3,7 @@
     <%= render "components/atoms/button", type: "create", additionalClass: "mb-8", text: "Create new project", link: new_project_path(@project) %>
   <% end %>
   <%= turbo_frame_tag "page_handler" %>
-  <%= turbo_frame_tag "projects", id: "projects", class: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10" do %>
+  <%= turbo_frame_tag "projects", class: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10" do %>
     <%= render "components/atoms/project_list"%>
   <% end %>
   <%= render "pager", pagy: @pagy %>
