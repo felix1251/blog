@@ -1,6 +1,6 @@
-<%= render "components/organisms/navbar" unless devise_controller? %>
+<%= navbar unless devise_controller? %>
 <% if notice.present? %>
     <p class="container mt-4 py-2 px-3 bg-green-50 text-green-500 font-medium rounded-lg inline-block"><%= notice %></p>
 <% end %>
 <%= yield %>
-<%= render "components/organisms/footer" unless devise_controller? %>
+<%= footer unless devise_controller? %>

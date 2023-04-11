@@ -1,19 +1,11 @@
 module ApplicationHelper
     include Pagy::Frontend
 
-    def main_layout
-        render "components/templates/main_layout" 
-    end
-    
-    def main_section
-        render "components/molecules/home_section_one"
+    def navbar
+        render "components/organisms/navbar"
     end
 
-    def project_section
-        render "components/molecules/home_section_two"
-    end
-
-    def service_section
-        render "components/molecules/home_section_three"
+    def footer
+        render "components/organisms/footer"
     end
 end

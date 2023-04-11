@@ -38,5 +38,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .project-card::after{
-    @apply bg-main absolute text-sm font-medium content-[attr(data-label)] top-[11px] right-[-15px] top-[11px] p-[0.35rem] w-[10rem] text-white text-center shadow-md;
+    @apply bg-main absolute text-sm font-medium content-[attr(data-label)] top-[11px] right-[-15px] p-[0.35rem] w-[10rem] text-white text-center shadow-md;
+}
+
+.ql-editor {
+    @apply text-[17px] font-medium;
 }
