@@ -20,12 +20,6 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :content, class: "primary-text-color" %>
-    <%= form.hidden_field :content,  required: true, placeholder: "Write a content..", rows: 6, class: "block dark:bg-dark dark:text-white rounded-md border outline-none px-3 py-2 mt-2 w-full", "data-form-target": "input" %>
-    <div class="min-h-[500px]" data-form-target="editor"></div>
-  </div>
-
-  <div class="my-5">
     <%= form.label "Cover Image" , class: "primary-text-color" %> <br/>
     <%= form.file_field :img, accept: "image/*", required: action_name == "new" , class: "mt-3" %>
   </div>
@@ -39,6 +33,12 @@
       <%= form.label :project_end, class: "primary-text-color" %>
       <%= form.date_field :project_end, class: "block dark:bg-dark dark:text-white rounded-md border outline-none px-3 py-2 mt-2 w-full" %>
     </div>
+  </div>
+  
+  <div class="my-5">
+    <%= form.label :content, class: "primary-text-color" %>
+    <%= form.hidden_field :content, "data-form-target": "input" %>
+    <div class="min-h-[500px]" data-form-target="editor"></div>
   </div>
  
   <div class="inline">
