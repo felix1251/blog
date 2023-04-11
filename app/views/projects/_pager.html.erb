@@ -1,10 +1,10 @@
 <% if pagy.next %>
-    <div id="pager" class="min-w-full my-8 flex justify-center">
+    <div id="pager" data-controller="pager" class="my-8 flex justify-center">
         <%= link_to(
             "Load more..",
             projects_path(page: pagy.next),
             class: "text-sm text-white hover:scale-105 hover:shadow-md py-2 px-5 bg-main font-medium",
-            data: { turbo_frame: "page_handler" }
+            data: { turbo_frame: "page_handler", action: "click->pager#loading", pager_target: "btn"}
         ) %>
     </div>
 <% end %>
