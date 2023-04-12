@@ -20,6 +20,11 @@
   </div>
 
   <div class="my-5">
+    <%= form.label :on_card, class: "primary-text-color" %>
+    <%= form.text_field :on_card, required: true, placeholder: "Write card details..", class: "block dark:bg-dark dark:text-white rounded-md border border-[#ccc] outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
     <%= form.label "Cover Image" , class: "primary-text-color" %> <br/>
     <%= form.file_field :img, accept: "image/*", required: action_name == "new" , class: "mt-3 block text-sm text-gray-500
       file:mr-4 file:py-2 file:px-4
