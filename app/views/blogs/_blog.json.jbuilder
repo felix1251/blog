@@ -1,2 +1,2 @@
 json.extract! blog, :id, :title, :content, :on_card, :created_at, :updated_at
-json.url blog_url(blog, format: :json)
+json.image_url blog.img.attached? ? rails_blob_path(blog.img) : nil
