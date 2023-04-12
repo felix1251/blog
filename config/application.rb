@@ -10,18 +10,11 @@ module BlogApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-    config.exceptions_app = self.routes # Add this line
-    config.active_storage.routes_prefix = '/storage'
-    # config.assets.paths << Rails.root.join("app", "assets", "images")
 
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
+    config.exceptions_app = self.routes
+    config.active_storage.routes_prefix = '/storage'
+
     config.time_zone = 'Singapore'
     config.active_record.default_timezone = :local
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
   end
 end
