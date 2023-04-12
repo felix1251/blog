@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_31_085834) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_12_045325) do
   create_table "action_text_rich_texts", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.text "body", size: :long
@@ -50,8 +50,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_31_085834) do
   end
 
   create_table "blogs", charset: "utf8mb4", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
+    t.string "title", null: false
+    t.text "content", null: false
+    t.text "on_card", null: false
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -61,6 +63,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_31_085834) do
     t.text "content", null: false
     t.date "project_start", null: false
     t.date "project_end"
+    t.text "on_card", null: false
     t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
