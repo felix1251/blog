@@ -10,10 +10,6 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <%= render(Templates::MainLayoutComponent.new(
-      navbar: navbar, footer: footer, 
-      devise_controller: devise_controller?, 
-      notice: notice, routerView: yield)) 
-    %>
+    <%= main_layout_component(routerView: yield) %>
   </body>
 </html>

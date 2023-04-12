@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 class Templates::MainLayoutComponent < ViewComponent::Base
+  delegate :navbar_component, to: :helpers
+  delegate :footer_component, to: :helpers
+  delegate :device_route?, to: :helpers
+  delegate :notice_msg, to: :helpers
 
-  def initialize(navbar:, footer:, devise_controller:, notice:, routerView:)
-    @navbar = navbar
-    @footer = footer
-    @devise_controller = devise_controller
-    @notice = notice
+  def initialize(routerView:)
     @routerView = routerView
   end
 end

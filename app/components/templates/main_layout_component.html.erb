@@ -1,6 +1,6 @@
-<%= @navbar unless @devise_controller %>
-<% if @notice.present? %>
-    <p class="container mt-4 py-2 px-3 bg-green-50 text-green-500 font-medium rounded-lg inline-block"><%= @notice %></p>
+<%= navbar_component unless device_route? %>
+<% if notice_msg.present? %>
+    <p class="container mt-4 py-2 px-3 bg-green-50 text-green-500 font-medium rounded-lg inline-block"><%= notice_msg %></p>
 <% end %>
 <%= @routerView %>
-<%= @footer unless @devise_controller %>
+<%= footer_component unless device_route? %>

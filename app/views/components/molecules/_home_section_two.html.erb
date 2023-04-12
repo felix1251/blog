@@ -8,7 +8,7 @@
     %>
     <%= turbo_frame_tag "projects", class: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10", src: "/projects?turbo_stream=none" do %>
         <% (1..4).each do %>
-            <%= render "components/atoms/project_card", project: nil %>
+            <%= project_card_component %>
         <% end %>
     <% end %>
 </section>
