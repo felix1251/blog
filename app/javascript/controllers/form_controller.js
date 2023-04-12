@@ -27,10 +27,15 @@ export default class extends Controller {
             },
         });
 
-        ["text-primary", "dark:text-white"].forEach((twcss) =>
-            this.quill.container.firstChild.classList.add(twcss)
-        );
+        this.customizeQuill();
 
+        this.quill.container.firstChild.innerHTML = this.inputTarget.value;
+        this.quill.on("text-change", () => {
+            this.inputTarget.value = this.quill.container.firstChild.innerHTML;
+        });
+    }
+
+    customizeQuill() {
         let container = document.getElementsByClassName("ql-container");
         let toolbar = document.getElementsByClassName("ql-toolbar");
         let svgs = document.querySelectorAll(".ql-stroke");
@@ -39,21 +44,19 @@ export default class extends Controller {
             toolbar[0].classList.add(twcss)
         );
 
-        ["rounded-b-lg", "border", "dark:border-gray-700"].forEach((twcss) =>
-            container[0].classList.add(twcss)
-        );
+        [
+            "rounded-b-lg",
+            "border",
+            "dark:border-gray-700",
+            "text-primary",
+            "dark:text-white",
+        ].forEach((twcss) => container[0].classList.add(twcss));
 
-        ["#8e8e8e"].forEach((color) =>
-            svgs.forEach((svg) => {
-                svg.style.stroke = color;
-            })
-        );
-
-        this.quill.container.firstChild.innerHTML = this.inputTarget.value;
-        this.quill.on("text-change", () => {
-            this.inputTarget.value = this.quill.container.firstChild.innerHTML;
+        svgs.forEach((svg) => {
+            svg.style.stroke = "#8e8e8e";
         });
     }
+
     disconnect() {
         if (this.quill) {
             this.quill = null;
