@@ -18,7 +18,7 @@ module ApplicationHelper
         Time.zone.now.year
     end
 
-    def device_route?
+    def devise_route?
         devise_controller?
     end
     
