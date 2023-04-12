@@ -78,3 +78,5 @@ group :test do
 end
 
 gem "pagy", "~> 6.0"
+
+gem "view_component", "~> 2.82"
