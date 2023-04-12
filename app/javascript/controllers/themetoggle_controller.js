@@ -5,14 +5,14 @@ export default class extends Controller {
     static targets = ["lightIcon", "darkIcon"];
 
     connect() {
-        this.element.addEventListener("click", () => this.clicked());
+        this.element.addEventListener("click", () => this.changeTheme());
     }
 
     disconnect() {
-        this.element.removeEventListener("click", () => this.clicked());
+        this.element.removeEventListener("click", () => this.changeTheme());
     }
 
-    clicked() {
+    changeTheme() {
         if (this.application.element.classList.contains("dark")) {
             this.application.element.classList.remove("dark");
             this.lightIconTarget.classList.remove("hidden");
