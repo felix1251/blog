@@ -46,10 +46,15 @@ module ApplicationHelper
         render Atoms::ThemeSwitcherComponent.new
     end
 
+    def service_card_component
+        render Atoms::ServiceCardComponent.new
+    end
+
     def plus_icon_component classProps: ""
         render Atoms::PlusIconComponent.new classProps: classProps
     end
 
+    #Molecules
     def home_main_section_component
         render Molecules::HomeMainSectionComponent.new
     end
@@ -73,4 +78,5 @@ module ApplicationHelper
     def project_list projects:
         render Molecules::ProjectListComponent.new projects: projects
     end
+
 end
