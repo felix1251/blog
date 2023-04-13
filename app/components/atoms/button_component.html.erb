@@ -10,7 +10,7 @@
 <% when "create" %>
     <a href="<%= @link %>" class="flex items-center w-fit gap-2 py-2 text-sm text-white hover:scale-105 hover:shadow-md px-5 bg-main font-medium <%= @additionalClass %>">
         <%= @text %>
-        <%= render "components/atoms/plus_icon", classProps: "w-4 h-4" %>
+        <%= plus_icon_component classProps: "w-4 h-4" %>
     </a>
 <% else %>
      <button class="w-fit py-2 text-sm text-white hover:scale-105 hover:shadow-md px-5 bg-main font-medium <%= @additionalClass %>">

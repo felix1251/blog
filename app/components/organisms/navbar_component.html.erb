@@ -11,8 +11,8 @@
       <a id="nav-list" href="/blogs" class="hidden md:block cursor-pointer <%= "text-main" if current_page?(:controller => 'blogs') rescue nil %>">
         Blog
       </a>
-      <%= render "components/atoms/theme_switcher" %>
-      <%= link_to "Sign out", destroy_user_session_path , data: { turbo_method: :delete }, class: "hover:underline" if user_signed_in? %>
+      <%= theme_switcher_component %>
+      <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, class: "hover:underline" if user_signed_in? %>
     </div>
   </div>
 </nav>
