@@ -34,7 +34,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .project-card::before{
-    @apply bg-main absolute top-[1.6rem] right-[-0.5rem] content-[''] h-[35px] w-[35px] rotate-45;
+    @apply bg-main absolute top-[1.55rem] right-[-0.5rem] content-[''] h-[35px] w-[35px] rotate-45;
 }
 
 .project-card::after{
