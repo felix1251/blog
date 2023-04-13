@@ -1,6 +1,8 @@
-<%= navbar_component unless devise_route? %>
-<% if notice_msg.present? %>
-    <p class="container mt-4 py-2 px-3 bg-green-50 text-green-500 font-medium rounded-lg inline-block"><%= notice_msg %></p>
+<% unless devise_controller? %>
+    <%= navbar_component %>
+    <%= notice_component %>
+    <%= @routerView %>
+    <%= footer_component %>
+<% else %>
+    <%= @routerView %>
 <% end %>
-<%= @routerView %>
-<%= footer_component unless devise_route? %>

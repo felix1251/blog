@@ -2,28 +2,8 @@ module ApplicationHelper
     include Pagy::Frontend
     
     #utils
-    def current_page(controller_name: "home")
-        current_page?(:controller => controller_name)
-    end
-
-    def logout_user
-        destroy_user_session_path
-    end
-
-    def user_signed_in
-        user_signed_in?
-    end
-
     def get_current_year
         Time.zone.now.year
-    end
-
-    def devise_route?
-        devise_controller?
-    end
-    
-    def notice_msg
-        notice
     end
 
     #Templates
@@ -32,7 +12,6 @@ module ApplicationHelper
     end
 
     #Organisms
-
     def navbar_component
         render(Organisms::NavbarComponent.new())
     end
@@ -48,5 +27,9 @@ module ApplicationHelper
 
     def project_card_component(project: nil)
         render(Atoms::ProjectCardComponent.new(project: project))
+    end
+
+    def notice_component
+        render(Atoms::NoticeComponent.new())
     end
 end
