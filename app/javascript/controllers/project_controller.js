@@ -4,7 +4,14 @@ export default class extends Controller {
     static targets = ["quillcontent"];
 
     connect() {
-        this.quill = new Quill(this.quillcontentTarget);
+        hljs.configure({ languages: ["javascript", "ruby", "python"] });
+
+        this.quill = new Quill(this.quillcontentTarget, {
+            theme: "bubble",
+            modules: {
+                syntax: true,
+            },
+        });
         this.quill.container.firstChild.style.padding = 0;
         this.quill.disable();
     }
