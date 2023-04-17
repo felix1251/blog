@@ -17,12 +17,12 @@ export default class extends Controller {
             this.application.element.classList.remove("dark");
             this.lightIconTarget.classList.remove("hidden");
             this.darkIconTarget.classList.add("hidden");
-            document.cookie = "theme=light";
+            document.cookie = "theme=light;path=/";
             return;
         }
         this.application.element.classList.add("dark");
         this.lightIconTarget.classList.add("hidden");
         this.darkIconTarget.classList.remove("hidden");
-        document.cookie = "theme=dark";
+        document.cookie = "theme=dark;path=/";
     }
 }

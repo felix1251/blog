@@ -1,10 +1,10 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-    static targets = ["content"];
+    static targets = ["quillcontent"];
 
     connect() {
-        this.quill = new Quill(this.element);
+        this.quill = new Quill(this.quillcontentTarget);
         this.quill.container.firstChild.style.padding = 0;
         this.quill.disable();
     }
