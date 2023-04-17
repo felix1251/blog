@@ -13,7 +13,7 @@ export default class extends Controller {
                     [{ align: [] }],
                     ["blockquote", "link", "image"],
                     ["clean"],
-                    [{ color: ["#0BB981"] }],
+                    [{ color: ["", "#0BB981"] }],
                 ],
                 imageResize: {
                     displaySize: true,
