@@ -1,6 +1,9 @@
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js", "data-turbo-track": "reload"  %>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css", "data-turbo-track": "reload" %>
+
 <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js", "data-turbo-track": "reload"  %>
-<%= javascript_include_tag "https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js", "data-turbo-track": "reload"  %>
 <%= stylesheet_link_tag "https://cdn.quilljs.com/1.3.6/quill.snow.css", "data-turbo-track": "reload" %>
+<%= javascript_include_tag "https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js", "data-turbo-track": "reload"  %>
 
 <%= form_with(model: project, class: "contents", data: { controller: "form"} ) do |form| %>
   <% if project.errors.any? %>
@@ -13,7 +16,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="my-5">
     <%= form.label :title, class: "primary-text-color" %>
     <%= form.text_field :title, required: true, placeholder: "Write a title..", class: "block dark:bg-dark dark:text-white rounded-md border border-[#ccc] outline-none px-3 py-2 mt-2 w-full" %>
@@ -21,7 +23,7 @@
 
   <div class="my-5">
     <%= form.label :on_card, class: "primary-text-color" %>
-    <%= form.text_field :on_card, required: true, placeholder: "Write card details..", class: "block dark:bg-dark dark:text-white rounded-md border border-[#ccc] outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_area :on_card, rows: 3, required: true, placeholder: "Write card details..", class: "block dark:bg-dark dark:text-white rounded-md border border-[#ccc] outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
