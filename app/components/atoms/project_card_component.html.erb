@@ -1,5 +1,5 @@
 <% if @project.present? %>
-    <a href="<%= "/projects/#{@project.id}" %>" data-turbo="false"
+    <a href="<%= project_path(:id => @project.id) %>" data-turbo="false" turbo-visit-control=reload
         data-label="<%= "#{@project.project_start.strftime("%b %Y")} - #{@project.project_end.strftime("%b %Y") rescue "present"}" %>"
         class="project-card transform transition duration-100 hover:scale-110"
     >
