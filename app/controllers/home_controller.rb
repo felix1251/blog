@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
+  DEFAULT_PER_PAGE = Pagy::DEFAULT[:items]
+
   def index
-    default_per_page = Pagy::DEFAULT[:items]
-    @projects = Project.limit(default_per_page).offset(0).order(id: :asc)
+    @projects = Project.limit(DEFAULT_PER_PAGE).offset(0).order(id: :asc)
   end
 end
