@@ -14,7 +14,7 @@
 }
 
 body {
-    @apply primary-bg-color flex flex-col h-screen;
+    @apply primary-bg-color flex flex-col h-screen transition-colors duration-200;
 }
 
 .primary-text-color {
