@@ -59,8 +59,8 @@ module ApplicationHelper
         render Molecules::HomeMainSectionComponent.new
     end
 
-    def home_project_section_component
-        render Molecules::HomeProjectSectionComponent.new
+    def home_project_section_component projects:
+        render Molecules::HomeProjectSectionComponent.new projects: projects
     end
 
     def home_service_section_component

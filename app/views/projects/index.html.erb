@@ -3,8 +3,8 @@
     <%= button_component type: "create", link: new_project_path(@project), text: "Create new project", additionalClass: "mb-8" %>
   <% end %>
   <%= turbo_frame_tag "page_handler" %>
-  <turbo-frame id="projects" class= "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+  <div id="projects" class= "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
     <%= project_list projects: @projects %>
-  </turbo-frame>
+  </div>
   <%= render "pager", pagy: @pagy %>
 </main>

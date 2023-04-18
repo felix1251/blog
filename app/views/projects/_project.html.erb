@@ -1,7 +1,7 @@
 <div class="primary-text-color" data-controller="project" id="<%= dom_id project %>">
-  <div class="relative flex w-full h-56">
+  <div class="relative flex w-full h-40 lg:h-56">
     <div class="absolute w-full h-full bg-black opacity-40"></div>
-    <h1 class="absolute text-white text-[3rem] font-normal" style='left:50%; top:50%; transform: translate(-50%, -50%)'><%= project.title %></h1>
+    <h1 class="absolute text-white text-center text-2xl md:text-3xl lg:text-[3rem] leading-8 lg:leading-[3rem] font-normal" style='left:50%; top:50%; transform: translate(-50%, -50%)'><%= project.title %></h1>
     <img class="w-full h-full object-cover object-center" src="<%= rails_blob_url(project.img) %>" loading="lazy">
   </div>
 
