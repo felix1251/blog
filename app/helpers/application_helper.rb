@@ -54,6 +54,10 @@ module ApplicationHelper
         render Atoms::PlusIconComponent.new classProps: classProps
     end
 
+    def navbutton_component
+        render Atoms::NavbuttonComponent.new
+    end
+
     #Molecules
     def home_main_section_component
         render Molecules::HomeMainSectionComponent.new
