@@ -1,4 +1,4 @@
 <%= turbo_frame_tag "page_handler" do %>
-  <%= turbo_stream_action_tag("append", target: "projects", template: %(#{project_list projects: @projects})) %>
+  <%= turbo_stream_action_tag("append", target: "projects", template: %(#{project_list_component projects: @projects})) %>
   <%= turbo_stream_action_tag("replace", target: "pager", template: %(#{render "pager", pagy: @pagy})) %>
 <% end %>

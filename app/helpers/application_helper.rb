@@ -87,7 +87,7 @@ module ApplicationHelper
         render Molecules::ErrorSection500Component.new
     end
 
-    def project_list projects:
+    def project_list_component projects:
         render Molecules::ProjectListComponent.new projects: projects
     end
 end
