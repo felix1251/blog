@@ -58,6 +58,10 @@ module ApplicationHelper
         render Atoms::NavbuttonComponent.new
     end
 
+    def navlink_component name: "", link: "/", controller:
+        render Atoms::NavlinkComponent.new name: name, link: link, controller: controller
+    end
+
     #Molecules
     def home_main_section_component
         render Molecules::HomeMainSectionComponent.new
@@ -82,5 +86,4 @@ module ApplicationHelper
     def project_list projects:
         render Molecules::ProjectListComponent.new projects: projects
     end
-
 end
