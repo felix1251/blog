@@ -1,14 +1,11 @@
-<main class="flex-1 container my-6">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+<main class="flex-1">
+  <%= page_header_component title: "Some projects I worked on", highlight: "Building awesome projects for awesome people" %>
+  <% if user_signed_in? %>
+    <div class="container mt-6 -mb-6">
+      <%= button_component type: "create", link: new_blog_path(@blog), text: "Create new blog", additionalClass: "mb-8" %>
+    </div>
   <% end %>
-
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Blogs</h1>
-    <%= link_to 'New blog', new_blog_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
-
-  <div id="blogs" class="min-w-full">
+  <div id="blogs" class="container py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
     <%= render @blogs %>
   </div>
 </main>
