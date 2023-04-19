@@ -62,6 +62,10 @@ module ApplicationHelper
         render Atoms::NavlinkComponent.new name: name, link: link, controller: controller
     end
 
+    def page_header_component title: "" , highlight: ""
+        render Atoms::PageHeaderComponent.new title: title, highlight: highlight
+    end
+
     #Molecules
     def home_main_section_component
         render Molecules::HomeMainSectionComponent.new
