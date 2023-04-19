@@ -1,26 +1,12 @@
-<% if @project.present? %>
-    <a href="<%= project_path(:id => @project.id) %>"
-        data-label="<%= "#{@project.project_start.strftime("%b %Y")} - #{@project.project_end.strftime("%b %Y") rescue "present"}" %>"
-        class="project-card transform transition duration-100 hover:sm:scale-110"
-    >
-        <div class="relative transition-colors duration-200 w-full h-full border dark:border-2 border-gray-300 rounded-lg dark:border-gray-700 hover:sm:shadow-md">
-            <img class="bg-white dark:bg-dark rounded-t-lg w-full h-[190px] md:h-[180px] object-cover" src="<%= rails_blob_path(@project.img) %>" alt="" loading="lazy"/>
-            <div class="p-5">
-                <h5 class="mb-1 text-xl font-medium tracking-tight primary-text-color"><%= @project.title %></h5>
-                <p class="leading-[21px] line-clamp-6 text-ellipsis text-gray-500 dark:text-gray-400 transition-colors duration-200"><%= @project.on_card %></p>
-            </div>
-        </div>
-    </a>
-<% else %>
-    <div class="transition-colors duration-200 border dark:border-2 border-gray-300 rounded-lg dark:border-gray-700  hover:shadow-md">
-        <div class="rounded-t-lg w-full animate-pulse h-[190px] md:h-[180px] bg-gray-200 dark:bg-gray-700 transition-colors duration-200"></div>
+<a href="<%= project_path(:id => @project.id) %>"
+    data-label="<%= "#{@project.project_start.strftime("%b %Y")} - #{@project.project_end.strftime("%b %Y") rescue "present"}" %>"
+    class="project-card transform transition duration-100 hover:sm:scale-110"
+>
+    <div class="relative transition-colors duration-200 w-full h-full border dark:border-2 border-gray-300 rounded-lg dark:border-gray-700 hover:sm:shadow-md">
+        <img class="bg-white dark:bg-dark rounded-t-lg w-full h-[190px] md:h-[180px] object-cover" src="<%= rails_blob_path(@project.img) %>" alt="" loading="lazy"/>
         <div class="p-5">
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 transition-colors duration-200 h-5 w-full mb-5"></div>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 transition-colors duration-200 h-3 w-10/12 mb-3"></div>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 transition-colors duration-200 h-3 w-12/12 mb-3"></div>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 transition-colors duration-200 h-3 w-11/12 mb-3"></div>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 transition-colors duration-200 h-3 w-10/12 mb-3"></div>
-            <div class="animate-pulse bg-gray-200 dark:bg-gray-700 h-3 w-12/12"></div>
+            <h5 class="mb-1 text-xl font-medium tracking-tight primary-text-color"><%= @project.title %></h5>
+            <p class="leading-[21px] text-sm line-clamp-6 text-ellipsis text-gray-500 dark:text-gray-400 transition-colors duration-200"><%= @project.on_card %></p>
         </div>
     </div>
-<% end %>
+</a>
