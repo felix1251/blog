@@ -30,9 +30,8 @@ module ComponentsHelper
         render Atoms::ArrowIconComponent.new
     end
 
-    def section_header_component title: "" , highlight: "" , url: "", redirect_title: "" , has_more: false
-        render Atoms::SectionHeaderComponent.new title: title , highlight: highlight, 
-            url: url, redirect_title: redirect_title , has_more: has_more
+    def section_header_component title: "", highlight: "" , url: "", redirect_title: "", has_more: false
+        render Atoms::SectionHeaderComponent.new title: title , highlight: highlight, url: url, redirect_title: redirect_title , has_more: has_more
     end
 
     def theme_switcher_component
