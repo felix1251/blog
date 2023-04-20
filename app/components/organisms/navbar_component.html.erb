@@ -3,8 +3,8 @@
     <a href="/" class="font-medium primary-text-color text-[18px] cursor-pointer">felixabacajen<span class="text-main">.com</span></a>
     <div class="flex gap-6 text-[16px] primary-text-color uppercase font-medium items-center">
       <%= navlink_component name: "Portfolio", link: "/", controller: "home" %>
-      <%= navlink_component name: "Projects", link: "/projects", controller: "projects" %>
-      <%= navlink_component name: "Blogs", link: "/blogs", controller: "blogs" %>
+      <%= navlink_component name: "Projects", link: projects_path, controller: "projects" %>
+      <%= navlink_component name: "Blogs", link: blogs_path, controller: "blogs" %>
       <%= theme_switcher_component %>
       <%= navbutton_component %>
       <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, class: "hover:underline" if user_signed_in? %>
