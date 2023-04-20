@@ -38,8 +38,8 @@ module ComponentsHelper
         render Atoms::ThemeSwitcherComponent.new
     end
 
-    def service_card_component
-        render Atoms::ServiceCardComponent.new
+    def service_card_component service: "", description: "", icon:
+        render Atoms::ServiceCardComponent.new service: service, description: description, icon: icon
     end
 
     def plus_icon_component classProps: ""
@@ -56,6 +56,18 @@ module ComponentsHelper
 
     def page_header_component title: "" , highlight: ""
         render Atoms::PageHeaderComponent.new title: title, highlight: highlight
+    end
+
+    def server_icon_component twcss: ""
+        render Atoms::ServerIconComponent.new twcss: twcss
+    end
+
+    def gift_icon_component twcss: ""
+        render Atoms::GiftIconComponent.new twcss: twcss
+    end
+
+    def fullstack_icon_component twcss: ""
+        render Atoms::FullstackIconComponent.new twcss: twcss
     end
 
     #Molecules
