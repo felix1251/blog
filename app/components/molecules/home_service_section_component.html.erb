@@ -6,8 +6,17 @@
         redirect_title: ""
     %>
     <div id="services" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <% (1..3).each do %>
-            <%= service_card_component %>
-        <% end %>
+        <%= service_card_component service: "Software Consultation", 
+            description: "I collaborate with teams and businesses to solve real-world challenges in product and software development.",
+            icon: gift_icon_component(twcss: "w-10 h-10 text-main mb-2")
+         %>
+        <%= service_card_component service: "Fullstack Development", 
+            description: "Go to this step by step guideline process on how to certify for your weekly benefits:",
+            icon: fullstack_icon_component(twcss: "w-10 h-10 text-main mb-2")
+        %>
+        <%= service_card_component service: "Back-end Development", 
+            description: "Go to this step by step guideline process on how to certify for your weekly benefits:",
+            icon: server_icon_component(twcss: "w-10 h-10 text-main mb-2")
+         %>
      </div >
 </section>
