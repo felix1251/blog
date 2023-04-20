@@ -1,7 +1,11 @@
-<div class="p-6 rounded-lg bg-gray-100 dark:bg-gray-700 hover:sm:shadow-md transform transition duration-100 hover:sm:scale-110">
-    <%= @icon %>
-    <h5 class="mb-2 text-xl font-medium tracking-tight primary-text-color"><%= @service %></h5>
-    <p class="leading-[21px] text-sm line-clamp-6 text-ellipsis text-gray-500 dark:text-gray-400">
-        <%= @description %>
-    </p>
-</div>
+<a href="https://github.com/felix1251"
+    class="transform transition duration-100 hover:sm:scale-110 group"
+>
+    <div data-label="Book a call" class="service-card relative p-6 w-full h-full bg-gray-100 dark:bg-gray-700 hover:sm:shadow-md rounded-lg">
+        <%= @icon %>
+        <h5 class="mb-2 text-xl font-medium tracking-tight primary-text-color"><%= @service %></h5>
+        <p class="leading-[21px] text-sm line-clamp-6 text-ellipsis text-gray-500 dark:text-gray-400">
+            <%= @description %>
+        </p>
+    </div>
+</a>

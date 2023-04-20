@@ -38,6 +38,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @apply bg-main absolute text-sm font-medium content-[attr(data-label)] top-[0.68rem] right-[-15px] p-[0.35rem] w-[10rem] text-white text-center shadow-md;
 }
 
+.service-card::after {
+    @apply opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-main text-white text-sm absolute content-[attr(data-label)] top-[0.68rem] right-[-0.7rem] px-3 py-1.5;
+}
+
 .ql-editor {
     @apply text-[17px] font-medium;
 }
