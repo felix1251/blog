@@ -1,5 +1,5 @@
 <a href="<%= project_path(:id => @project.id) %>"
-    data-label="<%= "#{@project.project_start.strftime("%b %Y")} - #{@project.project_end.strftime("%b %Y") rescue "present"}" %>"
+    data-label="<%= "#{@project.project_start.strftime("%b %Y")} - #{@project.project_end&.strftime("%b %Y") || "present"}"   %>"
     class="project-card transform transition duration-100 hover:sm:scale-110"
 >
     <div class="relative transition-colors duration-200 w-full h-full border dark:border-2 border-gray-300 rounded-lg dark:border-gray-700 hover:sm:shadow-md">

@@ -1,3 +1,6 @@
- <a href="<%= @link %>" class="hidden md:block cursor-pointer <%= "text-main" if current_page?(:controller => @controller ) rescue nil %>">
+<a 
+    href="<%= @link %>" 
+    class="hidden md:block cursor-pointer <%= "text-main" if controller_name == @controller %>"
+>
     <%= @name %>
 </a>

@@ -1,5 +1,5 @@
-  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js", "data-turbo-track": "reload"  %>
-    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css", "data-turbo-track": "reload" %>
+<%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js", "data-turbo-track": "reload"  %>
+<%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css", "data-turbo-track": "reload" %>
 
 <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js", "data-turbo-track": "reload"  %>
 <%= stylesheet_link_tag "https://cdn.quilljs.com/1.3.6/quill.snow.css", "data-turbo-track": "reload" %>
@@ -36,14 +36,14 @@
     %>
   </div>
 
-  <div class="my-5 grid grid-cols-1 md:grid-cols-2 gap-3">
+  <div class="my-5 grid grid-cols-1 md:grid-cols-4 gap-3">
     <div>
       <%= form.label :project_start, class: "primary-text-color" %>
-      <%= form.date_field :project_start, required: true, class: "block dark:bg-dark dark:text-white rounded-md border border-[#ccc] outline-none px-3 py-2 mt-2 w-full" %>
+      <%= form.date_field :project_start, max: Date.today, required: true, class: "block dark:bg-dark dark:text-white rounded-md border border-[#ccc] outline-none px-3 py-2 mt-2 w-full" %>
     </div>
     <div>
       <%= form.label :project_end, class: "primary-text-color" %>
-      <%= form.date_field :project_end, class: "block dark:bg-dark dark:text-white rounded-md border border-[#ccc] outline-none px-3 py-2 mt-2 w-full" %>
+      <%= form.date_field :project_end, max: Date.today, class: "block dark:bg-dark dark:text-white rounded-md border border-[#ccc] outline-none px-3 py-2 mt-2 w-full" %>
     </div>
   </div>
 
