@@ -6,7 +6,7 @@
     </div>
   <% end %>
   <%= turbo_frame_tag "page_handler" %>
-  <div id="projects" class="container py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+  <div id="projects" class="container py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
     <%= project_list_component projects: @projects %>
   </div>
   <%= render "pager", pagy: @pagy %>
