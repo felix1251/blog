@@ -11,7 +11,7 @@ class Atoms::ProjectCardComponent < ViewComponent::Base
     formatted_end = @project.project_end&.strftime("%b %Y") || "present"
 
     unless formatted_start == formatted_end
-      "#{formatted_start + " - " + formatted_end || "present"}"
+      "#{formatted_start + " - " + formatted_end}"
     else
       formatted_start
     end
