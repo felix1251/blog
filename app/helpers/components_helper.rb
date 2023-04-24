@@ -70,6 +70,10 @@ module ComponentsHelper
         render Atoms::FullstackIconComponent.new twcss: twcss
     end
 
+    def blog_card_component blog: 
+        render Atoms::BlogCardComponent.new blog: blog
+    end
+
     #Molecules
     def home_main_section_component
         render Molecules::HomeMainSectionComponent.new
