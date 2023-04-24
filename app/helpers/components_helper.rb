@@ -54,8 +54,8 @@ module ComponentsHelper
         render Atoms::NavlinkComponent.new name: name, link: link, controller: controller
     end
 
-    def page_header_component title: "" , highlight: ""
-        render Atoms::PageHeaderComponent.new title: title, highlight: highlight
+    def page_header_component title: "" , highlight: "", bgColor: "bg-gray-100 dark:bg-gray-700"
+        render Atoms::PageHeaderComponent.new title: title, highlight: highlight, bgColor: bgColor
     end
 
     def server_icon_component twcss: ""
@@ -93,5 +93,9 @@ module ComponentsHelper
 
     def project_list_component projects:
         render Molecules::ProjectListComponent.new projects: projects
+    end
+
+    def blog_section_component
+        render Molecules::BlogSectionComponent.new
     end
 end

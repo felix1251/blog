@@ -1,5 +1,8 @@
 <main class="flex-1">
-  <%= page_header_component title: "Latest stories and articles", highlight: "Thoughts on work, life, and the universe, but mostly just programming" %>
+  <%= page_header_component title: "Latest stories and articles", 
+    highlight: "Thoughts on work, life, and the universe, but mostly just programming",
+    bgColor: ""
+  %>
   <% if user_signed_in? %>
     <div class="container mt-6 -mb-6">
       <%= button_component type: "create", link: new_blog_path(@blog), text: "Create new blog", additionalClass: "mb-8" %>
