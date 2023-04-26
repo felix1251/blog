@@ -10,6 +10,6 @@
     <%= link_to 'Edit this project', edit_project_path(@project), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     <%= button_to 'Destroy this project', project_path(@project), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium mr-2" %>
   <%end%>
-  <hr class="my-4" />
+  <hr class="border-b dark:border-gray-700 transition-colors duration-200 my-5" />
   <%= link_to 'Go to projects page', projects_path, class: "text-main underline my-5" %>
 </main>
