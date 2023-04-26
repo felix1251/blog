@@ -4,6 +4,7 @@ export default class extends Controller {
     static targets = ["editor", "input"];
 
     connect() {
+        hljs.configure({ languages: ["javascript", "ruby", "python"] });
         this.quill = new Quill(this.editorTarget, {
             theme: "snow",
             modules: {
