@@ -1,15 +1,21 @@
 import { Controller } from "@hotwired/stimulus";
-import Utils from "../utils/quill";
 
 export default class extends Controller {
     connect() {
-        Utils.generateQuill({
-            type: "read-only",
-            target: this.element,
+        this.quill = new Quill(this.element, {
+            theme: "bubble",
+            modules: {
+                syntax: true,
+            },
         });
+
+        this.quill.container.firstChild.style.padding = 0;
+        this.quill.disable();
     }
 
     disconnect() {
-        Utils.disconnectQuill();
+        if (this.quill) {
+            this.quill = null;
+        }
     }
 }
