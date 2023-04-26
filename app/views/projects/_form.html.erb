@@ -5,7 +5,7 @@
 <%= stylesheet_link_tag "snow", "data-turbo-track": "reload" %>
 <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js", "data-turbo-track": "reload"  %>
 
-<%= form_with(model: project, class: "contents", data: { controller: "form"} ) do |form| %>
+<%= form_with(model: project, class: "contents") do |form| %>
   <% if project.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -48,11 +48,11 @@
     </div>
   </div>
 
-  <div class="my-5">
+  <div class="my-5" data-controller="quilleditor" >
     <%= form.label :content, class: "primary-text-color" %>
-    <%= form.hidden_field :content, "data-form-target": "input" %>
+    <%= form.hidden_field :content, data: { "quilleditor-target": "input" } %>
     <div class="mt-2">
-      <div class="min-h-[500px]" data-form-target="editor"></div>
+      <div class="min-h-[500px]" data-quilleditor-target="editor"></div>
     </div>
   </div>
  

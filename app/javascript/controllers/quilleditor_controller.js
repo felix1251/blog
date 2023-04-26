@@ -2,9 +2,8 @@ import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
     static targets = ["editor", "input"];
-    connect() {
-        hljs.configure({ languages: ["javascript", "ruby", "python"] });
 
+    connect() {
         this.quill = new Quill(this.editorTarget, {
             theme: "snow",
             modules: {
