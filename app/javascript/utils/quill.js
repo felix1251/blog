@@ -1,4 +1,4 @@
-class Util {
+class Quill {
     generateQuill({ type = "editor", target, input = "" }) {
         hljs.configure({ languages: ["javascript", "ruby", "python"] });
 
@@ -89,5 +89,5 @@ class Util {
     }
 }
 
-const instance = new Util();
+const instance = new Quill();
 export default instance;
