@@ -1,11 +1,21 @@
-import { Controller } from "@hotwired/stimulus";
-
-export default class extends Controller {
-    static targets = ["editor", "input"];
-    connect() {
+class Util {
+    generateQuill({ type = "editor", target, input = "" }) {
         hljs.configure({ languages: ["javascript", "ruby", "python"] });
 
-        this.quill = new Quill(this.editorTarget, {
+        switch (type) {
+            case "editor":
+                this.editorQuill(target, input);
+                break;
+            case "read-only":
+                this.displayQuill(target);
+                break;
+            default:
+                break;
+        }
+    }
+
+    editorQuill(target, input) {
+        this.quill = new Quill(target, {
             theme: "snow",
             modules: {
                 syntax: true,
@@ -32,10 +42,22 @@ export default class extends Controller {
 
         this.customizeQuill();
 
-        this.quill.container.firstChild.innerHTML = this.inputTarget.value;
+        this.quill.container.firstChild.innerHTML = input.value;
         this.quill.on("text-change", () => {
-            this.inputTarget.value = this.quill.container.firstChild.innerHTML;
+            input.value = this.quill.container.firstChild.innerHTML;
         });
+    }
+
+    displayQuill(target) {
+        this.quill = new Quill(target, {
+            theme: "bubble",
+            modules: {
+                syntax: true,
+            },
+        });
+
+        this.quill.container.firstChild.style.padding = 0;
+        this.quill.disable();
     }
 
     customizeQuill() {
@@ -60,9 +82,12 @@ export default class extends Controller {
         ].forEach((twcss) => container[0].classList.add(twcss));
     }
 
-    disconnect() {
+    disconnectQuill() {
         if (this.quill) {
             this.quill = null;
         }
     }
 }
+
+const instance = new Util();
+export default instance;

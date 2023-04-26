@@ -1,4 +1,4 @@
-<div class="primary-text-color" data-controller="project" id="<%= dom_id project %>">
+<div class="primary-text-color" id="<%= dom_id project %>">
   <div class="relative flex items-center justify-center w-full h-40 lg:h-56">
     <div class="absolute w-full h-full bg-black opacity-40"></div>
     <h1 class="absolute mx-5 md:mx-10 text-white text-center text-2xl md:text-3xl lg:text-[3rem] leading-7 lg:leading-[3rem] font-normal"><%= project.title %></h1>
@@ -9,7 +9,7 @@
     <span class="text-xl">"</span><%= project.on_card %><span class="text-xl">"</span>
   </p>
 
-  <div data-project-target="quillcontent" >
+  <div data-controller="quillreadonly" >
     <%= project.content.html_safe %>
   </div>
 
