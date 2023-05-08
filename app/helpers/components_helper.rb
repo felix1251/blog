@@ -99,7 +99,7 @@ module ComponentsHelper
         render Molecules::ProjectListComponent.new projects: projects
     end
 
-    def blog_section_component
-        render Molecules::BlogSectionComponent.new
+    def blog_section_component blogs: []
+        render Molecules::BlogSectionComponent.new blogs: blogs
     end
 end

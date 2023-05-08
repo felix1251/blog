@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs or /blogs.json
   def index
-    @blogs = Blog.all
+    @pagy, @blogs  = pagy(Blog.order(id: :asc), items: params[:per_page])
   end
 
   # GET /blogs/1 or /blogs/1.json
@@ -65,6 +65,6 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :content, :on_card)
+      params.require(:blog).permit(:title, :content, :on_card, :img)
     end
 end

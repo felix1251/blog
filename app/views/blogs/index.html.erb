@@ -8,10 +8,11 @@
       <%= button_component type: "create", link: new_blog_path(@blog), text: "Create new blog", additionalClass: "mb-8" %>
     </div>
   <% end %>
-
   <div id="blogs" class="bg-gray-100 dark:bg-gray-700 transition-colors duration-200 py-12">
     <div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      <%= blog_card_component blog: "" %>
+      <% @blogs.each do | blog| %>
+        <%= blog_card_component blog: blog %>
+      <% end %>
     </div>
   </div>
 </main>
