@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="space-x-1 text-sm text-grey font-medium hidden lg:flex">
-                <a href="/" class="text-main hover:underline">Felix Abacajen</a>
+                <a href="/" class="text-main hover:underline underline-offset-4">Felix Abacajen</a>
             </div>
         </div>
         <div class="flex space-x-2 justify-center sm:justify-end"> 
@@ -16,7 +16,7 @@
     </div>
     <a href="<%= blog_path(:id => @blog.id) %>" class="mb-5 relative overflow-hidden h-[300px] sm:h-[200px] md:h-[280px] lg:h-[360px] w-full block rounded-[32px]">
         <img src="<%= @blog.img.attached? && rails_blob_path(@blog.img) %>" 
-            class="hover:scale-[1.08] transition duration-300 ease-in-out absolute object-cover object-top w-full h-full" 
+            class="bg-gray-100 dark:bg-gray-700 hover:scale-[1.08] transition duration-300 ease-in-out absolute object-cover object-top w-full h-full" 
             alt="" loading="lazy"
         >
     </a>
