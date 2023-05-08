@@ -3,5 +3,6 @@ class HomeController < ApplicationController
 
   def index
     @projects = Project.limit(DEFAULT_PER_PAGE).offset(0).order(id: :asc)
+    @blogs = Blog.limit(DEFAULT_PER_PAGE).offset(0).order(id: :asc)
   end
 end
