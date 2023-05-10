@@ -5,6 +5,7 @@
       <%= navlink_component name: "Portfolio", link: "/", controller: "home" %>
       <%= navlink_component name: "Projects", link: projects_path, controller: "projects" %>
       <%= navlink_component name: "Blogs", link: blogs_path, controller: "blogs" %>
+      <%= navlink_component name: "About", link: "/about", controller: "about" %>
       <%= theme_switcher_component %>
       <%= navbutton_component %>
       <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, class: "hover:underline" if user_signed_in? %>
