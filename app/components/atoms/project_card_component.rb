@@ -16,4 +16,12 @@ class Atoms::ProjectCardComponent < ViewComponent::Base
       formatted_start
     end
   end
+
+  def go_to_project
+    project_path(:id => @project.id)
+  end
+
+  def project_image
+    rails_blob_path(@project.img)
+  end
 end
