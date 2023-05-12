@@ -3,6 +3,7 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
     connect() {
         hljs.configure({ languages: ["javascript", "ruby", "python"] });
+        
         this.quill = new Quill(this.element, {
             theme: "bubble",
             modules: {

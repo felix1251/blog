@@ -1,9 +1,8 @@
 <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js", "data-turbo-track": "reload"  %>
 <%= stylesheet_link_tag "monokai", "data-turbo-track": "reload" %>
-
-<%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js", "data-turbo-track": "reload"  %>
-<%= stylesheet_link_tag "snow", "data-turbo-track": "reload" %>
-<%= javascript_include_tag "https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js", "data-turbo-track": "reload"  %>
+<%= javascript_include_tag "quill", "data-turbo-track": "reload"  %>
+<%= stylesheet_link_tag "quill/dist/quill.snow.css", "data-turbo-track": "reload" %>
+<%= javascript_include_tag "quill-image-resize-module", "data-turbo-track": "reload"  %>
 
 <%= form_with(model: project, class: "contents") do |form| %>
   <% if project.errors.any? %>
