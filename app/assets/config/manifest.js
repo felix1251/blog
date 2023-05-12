@@ -3,3 +3,7 @@
 //= link_tree ../../javascript .js
 //= link_tree ../../../vendor/javascript .js
 //= link_tree ../builds
+//= link quill/dist/quill.js
+//= link quill-image-resize-module/image-resize.min.js
+//= link quill/dist/quill.bubble.css
+//= link quill/dist/quill.snow.css

@@ -1,8 +1,7 @@
 <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js", "data-turbo-track": "reload"  %>
+<%= javascript_include_tag "quill", "data-turbo-track": "reload"  %>
 <%= stylesheet_link_tag "monokai", "data-turbo-track": "reload" %>
-
-<%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js", "data-turbo-track": "reload"  %>
-<%= stylesheet_link_tag "bubble", "data-turbo-track": "reload" %>
+<%= stylesheet_link_tag "quill/dist/quill.bubble.css", "data-turbo-track": "reload" %>
 
 <main class="flex-1 container">
   <%= render @project %>
